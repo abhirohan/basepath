@@ -1,0 +1,11 @@
+RewriteEngine On
+
+#POST VIEW
+RewriteRule ^post/([0-9]+)/([0-9]+)/([0-9a-zA-Z-_]+) post-view.php?post_id=$1&post_user_id=$2&post_title=$3 [NC,L]
+
+#Add NEW POST URL
+RewriteRule ^user/new-post/([0-9]+)/([a-zA-Z0-9]+) user/new-post.php?user_id=$1&user=$2 [NC,L]
+
+#USER URL
+RewriteRule ^user/([a-zA-Z-_0-9]+)/([a-zA-Z-_0-9]+) user/user.php?user=$1"&token=$2 [NC,L]
+
